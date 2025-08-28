@@ -22,7 +22,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
 import org.jetbrains.compose.resources.painterResource
-import org.jetbrains.compose.ui.tooling.preview.Preview
 import portfolio.composeapp.generated.resources.Res
 import androidx.compose.ui.input.pointer.PointerIcon // Importa PointerIcon
 import androidx.compose.ui.input.pointer.pointerHoverIcon // Importa pointerHoverIcon
