@@ -47,7 +47,10 @@ kotlin {
         commonMain.dependencies {
 
             //windows size class
-            implementation(libs.adaptive)
+//            implementation(libs.adaptive)
+
+            //constraintlayout
+            implementation("tech.annexflow.compose:constraintlayout-compose-multiplatform:0.6.0")
 
             implementation(compose.runtime)
             implementation(compose.foundation)
