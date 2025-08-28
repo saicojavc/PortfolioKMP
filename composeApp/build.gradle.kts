@@ -38,7 +38,7 @@ kotlin {
         }
         binaries.executable()
     }
-    
+
     sourceSets {
         androidMain.dependencies {
             implementation(compose.preview)
@@ -51,6 +51,7 @@ kotlin {
 
             //constraintlayout
             implementation("tech.annexflow.compose:constraintlayout-compose-multiplatform:0.6.0")
+            
 
             implementation(compose.runtime)
             implementation(compose.foundation)

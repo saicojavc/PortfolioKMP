@@ -15,6 +15,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -26,6 +27,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.Dimension
+import com.saico.prtfoliommp.components.BottomBar
+import com.saico.prtfoliommp.components.TopBar
+import com.saico.prtfoliommp.feature.HomeScreen
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
@@ -49,67 +53,13 @@ fun App() {
                 .safeContentPadding()
                 .fillMaxSize(),
             topBar = {
-                Row(
-                    verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                ) {
-
-                    Text(
-                        modifier = Modifier
-                            .padding(16.dp)
-                            .clickable{},
-                        fontWeight = FontWeight.Bold,
-                        fontFamily = FontFamily.SansSerif,
-                        text = "Home",
-                        color = Color.White,
-                    )
-
-                    Text(
-                        modifier = Modifier
-                            .padding(16.dp)
-                            .clickable {},
-                        fontWeight = FontWeight.Bold,
-                        text = "About",
-                        color = Color.White
-                    )
-                    Text(
-                        modifier = Modifier
-                            .padding(16.dp)
-                            .clickable {},
-                        fontWeight = FontWeight.Bold,
-                        text = "Resume",
-                        color = Color.White
-                    )
-                    Text(
-                        modifier = Modifier
-                            .padding(16.dp)
-                            .clickable {},
-                        fontWeight = FontWeight.Bold,
-                        text = "Portfolio",
-                        color = Color.White
-                    )
-                }
+            TopBar()
+            },
+            bottomBar = {
+                BottomBar()
             }
         ) { paddingValues ->
-            ConstraintLayout {
-                val (backgroundImage, topBar, text) = createRefs()
-
-                Image(
-
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .constrainAs(backgroundImage) {
-                            top.linkTo(parent.top)
-//                            bottom.linkTo(parent.bottom)
-                            start.linkTo(parent.start)
-//                            end.linkTo(parent.end)
-                        },
-                    contentScale = ContentScale.Crop,
-                    painter = painterResource(Res.drawable.desk5),
-                    contentDescription = null
-                )
-
-            }
+            HomeScreen()
         }
 
     }
