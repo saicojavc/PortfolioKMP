@@ -45,6 +45,10 @@ kotlin {
             implementation(libs.androidx.activity.compose)
         }
         commonMain.dependencies {
+
+            //windows size class
+            implementation(libs.adaptive)
+
             implementation(compose.runtime)
             implementation(compose.foundation)
             implementation(compose.material3)
