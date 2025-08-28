@@ -13,24 +13,19 @@ import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.BlendMode
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import portfolio.composeapp.generated.resources.Res
-import portfolio.composeapp.generated.resources.desk5
 import androidx.compose.ui.input.pointer.PointerIcon // Importa PointerIcon
 import androidx.compose.ui.input.pointer.pointerHoverIcon // Importa pointerHoverIcon
-import portfolio.composeapp.generated.resources.desk3
 import portfolio.composeapp.generated.resources.desk6
 
 @Composable
@@ -55,9 +50,7 @@ fun Content() {
                     .fillMaxSize()
                     .constrainAs(backgroundImage) {
                         top.linkTo(parent.top)
-//                            bottom.linkTo(parent.bottom)
                         start.linkTo(parent.start)
-//                            end.linkTo(parent.end)
                     },
                 contentScale = ContentScale.Crop,
                 painter = painterResource(Res.drawable.desk6),
@@ -93,7 +86,6 @@ fun Content() {
                     modifier = Modifier.padding(top = 8.dp),
                     text = "Android Developer",
                     color = Color.White,
-//                    fontFamily = FontFamily.SansSerif,
                     fontSize = 35.sp,
                     fontStyle = FontStyle.Italic
                 )
@@ -139,7 +131,6 @@ fun Content() {
                     )
                 }
             }
-
         }
     }
 }
