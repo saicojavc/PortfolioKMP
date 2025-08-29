@@ -14,9 +14,10 @@ import androidx.compose.ui.input.pointer.pointerHoverIcon
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.saico.prtfoliommp.model.Screen
 
 @Composable
-fun TopBar() {
+fun TopBar(currentScreen: Screen, onScreenSelected: (Screen) -> Unit) {
     Row(
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceBetween,
@@ -25,9 +26,7 @@ fun TopBar() {
             modifier = Modifier
                 .padding(16.dp)
                 .pointerHoverIcon(PointerIcon.Hand),
-            onClick = {
-
-            },
+            onClick = { onScreenSelected(Screen.Home) },
             content = {
                 Text(
                     modifier = Modifier
@@ -35,7 +34,7 @@ fun TopBar() {
                     fontWeight = FontWeight.Bold,
                     fontFamily = FontFamily.SansSerif,
                     text = "Home",
-                    color = Color.White,
+                    color = if (currentScreen == Screen.Home) Color.Gray else Color.White,
                 )
             }
         )
@@ -43,16 +42,14 @@ fun TopBar() {
             modifier = Modifier
                 .padding(16.dp)
                 .pointerHoverIcon(PointerIcon.Hand),
-            onClick = {
-
-            },
+            onClick = { onScreenSelected(Screen.About) },
             content = {
                 Text(
                     modifier = Modifier
                         .padding(8.dp),
                     fontWeight = FontWeight.Bold,
                     text = "About",
-                    color = Color.White
+                    color = if (currentScreen == Screen.About) Color.Gray else Color.White
                 )
             }
         )
@@ -60,16 +57,14 @@ fun TopBar() {
             modifier = Modifier
                 .padding(16.dp)
                 .pointerHoverIcon(PointerIcon.Hand),
-            onClick = {
-
-            },
+            onClick = { onScreenSelected(Screen.Resume) },
             content = {
                 Text(
                     modifier = Modifier
                         .padding(8.dp),
                     fontWeight = FontWeight.Bold,
                     text = "Resume",
-                    color = Color.White
+                    color = if (currentScreen == Screen.Resume) Color.Gray else Color.White
                 )
             }
         )
@@ -77,16 +72,14 @@ fun TopBar() {
             modifier = Modifier
                 .padding(16.dp)
                 .pointerHoverIcon(PointerIcon.Hand),
-            onClick = {
-
-            },
+            onClick = { onScreenSelected(Screen.Portfolio) },
             content = {
                 Text(
                     modifier = Modifier
                         .padding(8.dp),
                     fontWeight = FontWeight.Bold,
                     text = "Portfolio",
-                    color = Color.White
+                    color = if (currentScreen == Screen.Portfolio) Color.Gray else Color.White
                 )
             }
         )

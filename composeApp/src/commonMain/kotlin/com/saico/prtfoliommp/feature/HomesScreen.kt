@@ -21,21 +21,22 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
+import com.saico.prtfoliommp.model.Screen // Import Screen
 import org.jetbrains.compose.resources.painterResource
 import portfolio.composeapp.generated.resources.Res
-import androidx.compose.ui.input.pointer.PointerIcon // Importa PointerIcon
-import androidx.compose.ui.input.pointer.pointerHoverIcon // Importa pointerHoverIcon
+import androidx.compose.ui.input.pointer.PointerIcon
+import androidx.compose.ui.input.pointer.pointerHoverIcon
 import portfolio.composeapp.generated.resources.desk6
 
 @Composable
-fun HomeScreen() {
+fun HomeScreen(onScreenSelected: (Screen) -> Unit) { // Add parameter
 
-    Content()
+    Content(onScreenSelected = onScreenSelected) // Pass parameter
 
 }
 
 @Composable
-fun Content() {
+fun Content(onScreenSelected: (Screen) -> Unit) { // Add parameter
 
     Column(
         modifier = Modifier.fillMaxSize(),
@@ -98,7 +99,7 @@ fun Content() {
                             .pointerHoverIcon(PointerIcon.Hand),
                         border = BorderStroke(1.dp, Color.White),
                         onClick = {
-
+                            onScreenSelected(Screen.Resume) // Navigate to Resume
                         },
                         content = {
                             Text(
@@ -116,7 +117,7 @@ fun Content() {
                             .pointerHoverIcon(PointerIcon.Hand),
                         border = BorderStroke(1.dp, Color.White),
                         onClick = {
-
+                            onScreenSelected(Screen.Portfolio) // Navigate to Portfolio
                         },
                         content = {
                             Text(
