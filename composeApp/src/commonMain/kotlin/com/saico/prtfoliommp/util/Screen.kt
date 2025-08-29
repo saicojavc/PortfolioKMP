@@ -1,4 +1,4 @@
-package com.saico.prtfoliommp.model
+package com.saico.prtfoliommp.util
 
 enum class Screen {
     Home,

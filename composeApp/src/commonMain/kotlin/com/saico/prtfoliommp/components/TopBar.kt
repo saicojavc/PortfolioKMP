@@ -14,7 +14,7 @@ import androidx.compose.ui.input.pointer.pointerHoverIcon
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.saico.prtfoliommp.model.Screen
+import com.saico.prtfoliommp.util.Screen
 
 @Composable
 fun TopBar(currentScreen: Screen, onScreenSelected: (Screen) -> Unit) {
