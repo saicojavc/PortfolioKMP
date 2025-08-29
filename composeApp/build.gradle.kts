@@ -18,7 +18,7 @@ kotlin {
             jvmTarget.set(JvmTarget.JVM_11)
         }
     }
-    
+
     @OptIn(ExperimentalWasmDsl::class)
     wasmJs {
         outputModuleName.set("composeApp")
@@ -51,7 +51,10 @@ kotlin {
 
             //constraintlayout
             implementation("tech.annexflow.compose:constraintlayout-compose-multiplatform:0.6.0")
-            
+
+//            implementation("br.com.devsrsouza.compose.icons:{ICON_PACK}:1.1.1")
+
+
 
             implementation(compose.runtime)
             implementation(compose.foundation)
@@ -97,5 +100,6 @@ android {
 
 dependencies {
     debugImplementation(compose.uiTooling)
+
 }
 
