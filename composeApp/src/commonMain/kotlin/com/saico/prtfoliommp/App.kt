@@ -87,17 +87,14 @@ fun App() {
                         }
                     },
                     bottomBar = {
-                        if (windowSizeClass == WindowSizeClass.Expanded || windowSizeClass == WindowSizeClass.Medium) {
-                            BottomBar()
-                        }
-
+                            BottomBar(windowSizeClass = windowSizeClass)
                     }
                 ) { paddingValues ->
 
                     when (currentScreen) {
                         Screen.Home -> HomeScreen(
                             onScreenSelected = { screen -> currentScreen = screen },
-                            windowSizeClass = windowSizeClass // Pass windowSizeClass
+                            windowSizeClass = windowSizeClass
                         )
 
                         Screen.About -> AboutScreen() // Needs to be adapted

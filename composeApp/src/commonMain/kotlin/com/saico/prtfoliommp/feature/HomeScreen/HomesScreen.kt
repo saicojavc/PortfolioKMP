@@ -50,7 +50,7 @@ fun Content(
 ) { // Add windowSizeClass
 
    when(windowSizeClass){
-       WindowSizeClass.Compact -> CompactHomeScreen()
+       WindowSizeClass.Compact -> CompactHomeScreen(onScreenSelected = onScreenSelected, windowSizeClass = windowSizeClass)
        WindowSizeClass.Medium -> ExpandedHomeScreen(onScreenSelected = onScreenSelected, windowSizeClass = windowSizeClass)
        WindowSizeClass.Expanded -> ExpandedHomeScreen(onScreenSelected = onScreenSelected, windowSizeClass = windowSizeClass)
    }

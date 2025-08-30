@@ -35,7 +35,7 @@ fun ExpandedHomeScreen(
     windowSizeClass: WindowSizeClass
 ){
 
-    Content(
+    ExtendedContent(
         onScreenSelected = onScreenSelected,
         windowSizeClass = windowSizeClass
         )
@@ -43,7 +43,7 @@ fun ExpandedHomeScreen(
 }
 
 @Composable
-fun Content(
+fun ExtendedContent(
     onScreenSelected: (Screen) -> Unit,
     windowSizeClass: WindowSizeClass
 ){
