@@ -1,4 +1,4 @@
-package com.saico.prtfoliommp.feature.HomeScreen.screenSizes
+package com.saico.prtfoliommp.feature.homeScreen.screenSizes
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
@@ -8,7 +8,6 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -31,30 +30,31 @@ import portfolio.composeapp.generated.resources.Res
 import portfolio.composeapp.generated.resources.desk6
 
 @Composable
-fun CompactHomeScreen(
+fun ExpandedHomeScreen(
     onScreenSelected: (Screen) -> Unit,
     windowSizeClass: WindowSizeClass
-) {
-    CompactContent(
+){
+
+    ExtendedContent(
         onScreenSelected = onScreenSelected,
         windowSizeClass = windowSizeClass
-    )
+        )
+
 }
+
 @Composable
-fun CompactContent(
+fun ExtendedContent(
     onScreenSelected: (Screen) -> Unit,
     windowSizeClass: WindowSizeClass
-) {
+){
     Column(
         modifier = Modifier.fillMaxSize(),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
     ) {
         ConstraintLayout {
-
             val (backgroundImage, information) = createRefs()
 
             Image(
+
                 modifier = Modifier
                     .fillMaxSize()
                     .constrainAs(backgroundImage) {
@@ -65,17 +65,16 @@ fun CompactContent(
                 painter = painterResource(Res.drawable.desk6),
                 contentDescription = null
             )
+
             Column(
                 modifier = Modifier
+                    .padding(start = 92.dp)
                     .fillMaxWidth()
                     .constrainAs(information) {
                         top.linkTo(parent.top)
                         start.linkTo(parent.start)
-                        end.linkTo(parent.end)
                         bottom.linkTo(parent.bottom)
-                    },
-                horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.Center
+                    }
             ) {
                 Text(
                     text = "Jorge A.",
@@ -99,15 +98,14 @@ fun CompactContent(
                     fontSize = 35.sp,
                     fontStyle = FontStyle.Italic
                 )
-                Column(
-                    verticalArrangement = Arrangement.SpaceBetween, // This inner column might still affect spacing
-                    horizontalAlignment = Alignment.CenterHorizontally
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.SpaceBetween
                 ) {
                     TextButton(
                         modifier = Modifier
                             .padding(8.dp)
-                            .pointerHoverIcon(PointerIcon.Hand)
-                            .width(250.dp),
+                            .pointerHoverIcon(PointerIcon.Hand),
                         border = BorderStroke(1.dp, Color.White),
                         onClick = {
                             onScreenSelected(Screen.Resume) // Navigate to Resume
@@ -125,8 +123,7 @@ fun CompactContent(
                     TextButton(
                         modifier = Modifier
                             .padding(8.dp)
-                            .pointerHoverIcon(PointerIcon.Hand)
-                            .width(250.dp),
+                            .pointerHoverIcon(PointerIcon.Hand),
                         border = BorderStroke(1.dp, Color.White),
                         onClick = {
                             onScreenSelected(Screen.Portfolio) // Navigate to Portfolio
@@ -146,3 +143,4 @@ fun CompactContent(
         }
     }
 }
+
