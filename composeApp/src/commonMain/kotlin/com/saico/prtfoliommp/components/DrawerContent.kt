@@ -1,5 +1,6 @@
 package com.saico.prtfoliommp.components
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -28,7 +29,7 @@ fun DrawerContent(
 ) {
 
     Column(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier.fillMaxSize().background(Color.Black.copy(alpha = .85f)),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         TextButton(
