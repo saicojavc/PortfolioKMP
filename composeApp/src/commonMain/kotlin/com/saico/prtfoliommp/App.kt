@@ -23,7 +23,7 @@ import com.saico.prtfoliommp.components.BottomBar
 import com.saico.prtfoliommp.components.TopBar
 import com.saico.prtfoliommp.feature.aboutScreen.AboutScreen
 import com.saico.prtfoliommp.feature.homeScreen.HomeScreen
-import com.saico.prtfoliommp.feature.PortfolioScreen
+import com.saico.prtfoliommp.feature.portfolioScreen.PortfolioScreen
 import com.saico.prtfoliommp.feature.ResumeScreen
 import com.saico.prtfoliommp.util.Screen
 import com.saico.prtfoliommp.util.WindowSizeClass
@@ -100,7 +100,7 @@ fun App() {
 
                         Screen.About -> AboutScreen(windowSizeClass = windowSizeClass) // Needs to be adapted
                         Screen.Resume -> ResumeScreen() // Needs to be adapted
-                        Screen.Portfolio -> PortfolioScreen() // Needs to be adapted
+                        Screen.Portfolio -> PortfolioScreen(windowSizeClass = windowSizeClass) // Needs to be adapted
                     }
                 }
             }
