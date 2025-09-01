@@ -40,9 +40,11 @@ kotlin {
     }
 
     sourceSets {
+
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
+            implementation(libs.ktor.client.okhttp)
         }
         commonMain.dependencies {
 
@@ -54,7 +56,11 @@ kotlin {
 
 //            implementation("br.com.devsrsouza.compose.icons:{ICON_PACK}:1.1.1")
 
-            implementation("io.coil-kt.coil3:coil-compose:3.3.0")
+            implementation(libs.coil.compose)
+//            implementation(libs.coil.network.ktor)
+//            implementation(libs.ktor.client.core)
+
+
 
             implementation(compose.runtime)
             implementation(compose.foundation)

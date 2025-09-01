@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -21,9 +22,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
+import coil3.compose.AsyncImage
 import org.jetbrains.compose.resources.painterResource
 import portfolio.composeapp.generated.resources.Res
 import portfolio.composeapp.generated.resources.me
+
 
 
 @Composable
@@ -81,6 +84,15 @@ fun ContentExpandedAboutScreen() {
                     contentDescription = null,
 
                     )
+
+//                AsyncImage(
+//                    model =  "https://res.cloudinary.com/ds4ko1uws/image/upload/v1756578749/me_dbrl4f.jpg",
+//                    contentDescription = null,
+//                    modifier = Modifier.size(350.dp).clip(shape = CircleShape),
+//                    contentScale = ContentScale.Crop
+//                )
+
+
             }
         }
     }
