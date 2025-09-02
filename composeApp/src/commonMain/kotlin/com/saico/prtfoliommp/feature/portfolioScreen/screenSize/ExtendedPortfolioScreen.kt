@@ -15,6 +15,7 @@ import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.ElevatedCard
+import androidx.compose.material3.PlainTooltip
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -25,26 +26,23 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.saico.prtfoliommp.model.Project
+import com.saico.prtfoliommp.model.listOfProjects
 import com.saico.prtfoliommp.util.WindowSizeClass
-import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.painterResource
-import portfolio.composeapp.generated.resources.Res
-import portfolio.composeapp.generated.resources.p1_airline
-import portfolio.composeapp.generated.resources.p2_shop
-import portfolio.composeapp.generated.resources.p3_house
-import portfolio.composeapp.generated.resources.p4_ticket
-import portfolio.composeapp.generated.resources.p5_jit
+import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material3.*
+import androidx.compose.ui.platform.LocalUriHandler
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.dp
 
 @Composable
 fun ExtendPortfolioScreen(windowSizeClass: WindowSizeClass) {
 
-    val listOfProjects = listOf(
-        Res.drawable.p1_airline,
-        Res.drawable.p2_shop,
-        Res.drawable.p3_house,
-        Res.drawable.p4_ticket,
-        Res.drawable.p5_jit,
-    )
+    val listOfProjects = listOfProjects
 
     ContentExtendPortfolioScreen(listOfProjects = listOfProjects, windowSizeClass = windowSizeClass)
 
@@ -52,19 +50,19 @@ fun ExtendPortfolioScreen(windowSizeClass: WindowSizeClass) {
 
 @Composable
 fun ContentExtendPortfolioScreen(
-    listOfProjects: List<DrawableResource>,
+    listOfProjects: List<Project>,
     windowSizeClass: WindowSizeClass
 ) {
     Column(
         modifier = Modifier
             .fillMaxSize()
             .background(color = Color.Black)
-            .padding(top = 42.dp),
+            .padding(top = 36.dp),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Column(
-            modifier = Modifier.fillMaxWidth().padding(top = 42.dp, bottom = 64.dp),
+            modifier = Modifier.fillMaxWidth().padding(top = 24.dp, bottom = 64.dp),
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
@@ -83,7 +81,7 @@ fun ContentExtendPortfolioScreen(
             ) {
                 items(listOfProjects.size) { index ->
 
-                    ProjectCard(projectImage = listOfProjects[index])
+                    ProjectCard(project = listOfProjects[index])
                 }
             }
         }
@@ -92,44 +90,93 @@ fun ContentExtendPortfolioScreen(
 
 
 @Composable
-fun ProjectCard(projectImage: DrawableResource) {
+fun ProjectCard(project: Project) {
     ElevatedCard(
         modifier = Modifier
-            .padding(bottom = 38.dp, start = 12.dp, end = 12.dp)
+            .padding(bottom = 32.dp, start = 12.dp, end = 12.dp)
             .width(180.dp)
             .background(Color.Black, shape = RoundedCornerShape(20.dp))
             .border(1.dp, Color.White, shape = RoundedCornerShape(20.dp))
     ) {
         Column(
             modifier = Modifier.fillMaxSize().background(Color.Black),
-            horizontalAlignment = Alignment.CenterHorizontally
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center
         ) {
             Image(
                 modifier = Modifier.height(280.dp),
                 contentScale = ContentScale.Crop,
-                painter = painterResource(projectImage),
+                painter = painterResource(project.projectImage),
                 contentDescription = null,
             )
-            TextButton(
-                onClick = { /*TODO*/ },
-                modifier = Modifier.fillMaxWidth().padding(8.dp)
-                    .border(1.dp, Color.White, shape = CircleShape)
-            ) {
-                Text(
-                    text = "View Project",
-                    color = Color.White
-                )
+            Text(
+                modifier = Modifier.padding( 8.dp),
+                text = project.projectName,
+                color = Color.White,
+                fontWeight = FontWeight.ExtraBold,
+                fontSize = 22.sp
+            )
+            Text(
+                modifier = Modifier.padding( 8.dp),
+                text = project.description,
+                color = Color.White,
+                fontSize = 16.sp,
+                textAlign = TextAlign.Center
+            )
+//            TextButton(
+//                onClick = { /*TODO*/ },
+//                modifier = Modifier.fillMaxWidth().padding(8.dp)
+//                    .border(1.dp, Color.White, shape = CircleShape)
+//            ) {
+//                Text(
+//                    text = "View Project",
+//                    color = Color.White
+//                )
+//            }
+            GithubButton(project = project)
+
+
+        }
+    }
+}
+
+
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun GithubButton(project: Project) {
+    val uriHandler = LocalUriHandler.current
+    val tooltipMessage = if (project.hasGithubRepo) {
+        "Open repository on GitHub"
+    } else {
+        "This project is private on GitHub"
+    }
+
+    TooltipBox(
+        positionProvider = TooltipDefaults.rememberPlainTooltipPositionProvider(),
+        tooltip = {
+            PlainTooltip {
+                Text(tooltipMessage)
             }
-            TextButton(
-                onClick = { /*TODO*/ },
-                modifier = Modifier.fillMaxWidth().padding(8.dp)
-                    .border(1.dp, Color.White, shape = CircleShape)
-            ) {
-                Text(
-                    text = "Go to GitHub",
-                    color = Color.White
-                )
-            }
+        },
+        state = rememberTooltipState(),
+        modifier = Modifier.padding(8.dp),
+
+    ) {
+        TextButton(
+            enabled = project.hasGithubRepo,
+            onClick = {
+                project.githubRepoUrl?.let { uriHandler.openUri(it) }
+            },
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(8.dp)
+                .border(1.dp , if (project.hasGithubRepo)Color.White else Color.Gray, shape = CircleShape)
+        ) {
+            Text(
+                text = "Go to GitHub",
+                color = if (project.hasGithubRepo)Color.White else Color.Gray
+            )
         }
     }
 }
