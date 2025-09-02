@@ -109,33 +109,34 @@ fun CompactBottomBar(uriHandler: UriHandler, linkedinUrl: String, githubUri: Str
         verticalArrangement = Arrangement.SpaceBetween,
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        Row(
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.SpaceBetween,
-        ) {
-            Image(
-                modifier = Modifier
-                    .padding(4.dp)
-                    .background(color = Color.White, shape = CircleShape)
-                    .size(35.dp)
-                    .clickable { uriHandler.openUri(linkedinUrl) },
-                painter = painterResource(Res.drawable.`in`),
-                contentDescription = "LinkedIn Profile"
-            )
-            Image(
 
-                modifier = Modifier
-                    .padding(4.dp)
-                    .background(color = Color.White, shape = CircleShape)
-                    .size(35.dp)
-                    .clickable { uriHandler.openUri(githubUri) },
-                painter = painterResource(Res.drawable.github),
-                contentDescription = null
-            )
-        }
         Row(
             verticalAlignment = Alignment.CenterVertically,
         ) {
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.SpaceBetween,
+            ) {
+                Image(
+                    modifier = Modifier
+                        .padding(4.dp)
+                        .background(color = Color.White, shape = CircleShape)
+                        .size(35.dp)
+                        .clickable { uriHandler.openUri(linkedinUrl) },
+                    painter = painterResource(Res.drawable.`in`),
+                    contentDescription = "LinkedIn Profile"
+                )
+                Image(
+
+                    modifier = Modifier
+                        .padding(4.dp)
+                        .background(color = Color.White, shape = CircleShape)
+                        .size(35.dp)
+                        .clickable { uriHandler.openUri(githubUri) },
+                    painter = painterResource(Res.drawable.github),
+                    contentDescription = null
+                )
+            }
             Image(
                 modifier = Modifier
                     .padding(4.dp)

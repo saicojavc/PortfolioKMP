@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">Portfolio</string>
     <string name="my_projects">Mis Proyectos</string>
     <string name="tooltip_open_github">Abrir repositorio en GitHub</string>
     <string name="tooltip_private_github">Este proyecto es privado en GitHub</string>
