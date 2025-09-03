@@ -3,4 +3,18 @@
     <string name="tooltip_open_github">Open repository on GitHub</string>
     <string name="tooltip_private_github">This project is private on GitHub</string>
     <string name="button_go_to_github">Go to GitHub</string>
+    <string name="menu">Menu</string>
+    <string name="home">Home</string>
+    <string name="about">About</string>
+    <string name="resume">Resume</string>
+    <string name="portfolio">Portfolio</string>
+    <string name="linkedin_profile">LinkedIn Profile</string>
+    <string name="phone_number">+1 305 342 0620</string>
+    <string name="email_address">john.mckinley@examplepetstore.com</string>
+    <string name="first_name_jorge">Jorge A.</string>
+    <string name="last_name_valdes">Valdes</string>
+    <string name="title_android_developer">Android Developer</string>
+    <string name="about_me_description">Computer Engineer specialized in android development with experiencebuilding native android applications using Kotlin and Jetpack Compose and with strong focus on UI/UX best practice. Skilled in implementing MVVM architecture, Room Database and integration RESTfull API using Retrofit.</string>
+    <string name="resume_screen_title">Resume Screen</string>
+    <string name="download_cv">Download CV</string>
 </resources>
