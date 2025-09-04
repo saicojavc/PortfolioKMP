@@ -91,7 +91,7 @@ fun ExpandBottomBar(uriHandler: UriHandler, linkedinUrl: String, githubUri: Stri
             contentDescription = null
         )
         Text(
-            text = "john.mckinley@examplepetstore.com",
+            text = "jorgito.avc03@gmail.com",
             color = Color.White,
         )
 
