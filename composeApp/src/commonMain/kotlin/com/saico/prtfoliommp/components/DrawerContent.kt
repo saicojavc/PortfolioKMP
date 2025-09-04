@@ -34,6 +34,7 @@ fun DrawerContent(
     ) {
         TextButton(
             modifier = Modifier
+                .padding(top=76.dp)
                 .padding(16.dp)
                 .pointerHoverIcon(PointerIcon.Hand),
             onClick = {
