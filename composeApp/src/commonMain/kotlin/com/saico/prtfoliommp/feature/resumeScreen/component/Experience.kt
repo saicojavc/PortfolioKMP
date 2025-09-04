@@ -19,22 +19,24 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.saico.prtfoliommp.model.Resume
 
 @Composable
-fun Experience() {
+fun Experience(resume: Resume) {
 
-    val listOfExperience = listOf(
-        "Android Developer in XETID"," Android Developer in Upwork"
-    )
-    LazyColumn {
+    LazyColumn(
+        modifier = Modifier
+            .height(200.dp)
+    ) {
         item {
             Text(
+                modifier = Modifier.padding(8.dp),
                 text = "Experience",
                 color = Color.White,
                 fontWeight = FontWeight.Bold
             )
         }
-        items(listOfExperience) { experience ->
+        items(resume.experienceList) { experience ->
             Row(
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.Center
@@ -46,7 +48,7 @@ fun Experience() {
                         .border(1.dp, Color.White, shape = CircleShape)
                 ) {
                     Text(
-                        text = (listOfExperience.indexOf(experience) + 1).toString(),
+                        text = (resume.experienceList.indexOf(experience) + 1).toString(),
                         color = Color.White,
                         fontWeight = FontWeight.Bold,
                         modifier = Modifier.padding(vertical = 8.dp, horizontal = 16.dp)
@@ -59,7 +61,7 @@ fun Experience() {
                     fontWeight = FontWeight.Bold,
                 )
             }
-            if (listOfExperience.indexOf(experience) != listOfExperience.lastIndex) {
+            if (resume.experienceList.indexOf(experience) != resume.experienceList.lastIndex) {
                 VerticalDivider(
                     modifier = Modifier
                         .padding(start = 28.dp)

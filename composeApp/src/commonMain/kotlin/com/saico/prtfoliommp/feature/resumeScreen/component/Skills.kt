@@ -19,30 +19,24 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.saico.prtfoliommp.model.Resume
 
 @Composable
-fun Skills() {
-    val skillsList = listOf(
-        "Kotlin",
-        "Jetpack Compose",
-        "UI/UX",
-        "Retrofit",
-        "Room Database",
-        "Gradle",
-        "Android Studio",
-        "Kotlin Multiplatform",
-        "Compose Multiplatform"
-    )
-    LazyColumn {
+fun Skills(resume: Resume) {
+    LazyColumn(
+        modifier = Modifier
+            .height(650.dp)
+    ) {
         item {
             Text(
+                modifier = Modifier.padding(8.dp),
                 text = "Skills",
                 color = Color.White,
                 fontWeight = FontWeight.Bold
             )
         }
 
-        items(skillsList) { skill ->
+        items(resume.skillsList) { skill ->
             Row(
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.Center
@@ -54,7 +48,7 @@ fun Skills() {
                         .border(1.dp, Color.White, shape = CircleShape)
                 ) {
                     Text(
-                        text = (skillsList.indexOf(skill) + 1).toString(),
+                        text = (resume.skillsList.indexOf(skill) + 1).toString(),
                         color = Color.White,
                         fontWeight = FontWeight.Bold,
                         modifier = Modifier.padding(vertical = 8.dp, horizontal = 16.dp)
@@ -67,7 +61,7 @@ fun Skills() {
                     fontWeight = FontWeight.Bold,
                 )
             }
-            if (skillsList.indexOf(skill) != skillsList.lastIndex) {
+            if (resume.skillsList.indexOf(skill) != resume.skillsList.lastIndex) {
                 VerticalDivider(
                     modifier = Modifier
                         .padding(start = 28.dp)
