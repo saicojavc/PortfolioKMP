@@ -9,7 +9,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.ElevatedCard
@@ -53,14 +52,14 @@ fun ProjectCard(project: Project) {
                 contentDescription = null,
             )
             Text(
-                modifier = Modifier.padding( 8.dp),
+                modifier = Modifier.padding(8.dp),
                 text = project.projectName,
                 color = Color.White,
                 fontWeight = FontWeight.ExtraBold,
                 fontSize = 22.sp
             )
             Text(
-                modifier = Modifier.padding( 8.dp),
+                modifier = Modifier.padding(8.dp),
                 text = project.description,
                 color = Color.White,
                 fontSize = 16.sp,
@@ -82,7 +81,6 @@ fun ProjectCard(project: Project) {
         }
     }
 }
-
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -114,11 +112,15 @@ fun GithubButton(project: Project) {
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(8.dp)
-                .border(1.dp , if (project.hasGithubRepo)Color.White else Color.Gray, shape = CircleShape)
+                .border(
+                    1.dp,
+                    if (project.hasGithubRepo) Color.White else Color.Gray,
+                    shape = CircleShape
+                )
         ) {
             Text(
                 text = "Go to GitHub",
-                color = if (project.hasGithubRepo)Color.White else Color.Gray
+                color = if (project.hasGithubRepo) Color.White else Color.Gray
             )
         }
     }

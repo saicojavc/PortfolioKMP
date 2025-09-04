@@ -29,7 +29,7 @@ fun CompactResumeScreen(resume: Resume, windowSizeClass: WindowSizeClass) {
 
 
 @Composable
-fun ContentCompactResumeScreen(resume: Resume, windowSizeClass: WindowSizeClass, ) {
+fun ContentCompactResumeScreen(resume: Resume, windowSizeClass: WindowSizeClass) {
     ConstraintLayout(
         modifier = Modifier.fillMaxSize()
     ) {

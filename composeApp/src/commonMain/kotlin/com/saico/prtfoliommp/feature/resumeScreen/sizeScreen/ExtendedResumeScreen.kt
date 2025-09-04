@@ -27,7 +27,7 @@ import portfolio.composeapp.generated.resources.desk8
 fun ExpandedResumeScreen(resume: Resume, windowSizeClass: WindowSizeClass) {
 
 
-    ContentExpandedResumeScreen(resume = resume, windowSizeClass =windowSizeClass)
+    ContentExpandedResumeScreen(resume = resume, windowSizeClass = windowSizeClass)
 }
 
 @Composable
@@ -36,7 +36,7 @@ fun ContentExpandedResumeScreen(resume: Resume, windowSizeClass: WindowSizeClass
     ConstraintLayout(
         modifier = Modifier.fillMaxSize()
     ) {
-        val (backgroundImage, content) = createRefs()
+        val (backgroundImage) = createRefs()
 
         Image(
             modifier = Modifier
@@ -62,7 +62,7 @@ fun ContentExpandedResumeScreen(resume: Resume, windowSizeClass: WindowSizeClass
 
 
             Skills(resume = resume)
-            Education(resume = resume,windowSizeClass =windowSizeClass)
+            Education(resume = resume, windowSizeClass = windowSizeClass)
             Experience(resume = resume)
         }
 

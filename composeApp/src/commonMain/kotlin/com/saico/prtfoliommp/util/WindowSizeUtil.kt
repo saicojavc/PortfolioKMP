@@ -1,9 +1,9 @@
 package com.saico.prtfoliommp.util
 
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.ReadOnlyComposable
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+
 // Posiblemente necesites una forma de obtener el ancho de la ventana actual.
 // Para Compose Multiplatform puro, BoxWithConstraints es la forma más directa
 // de obtener las dimensiones disponibles para un composable específico.

@@ -39,6 +39,7 @@ fun CompactHomeScreen(
         windowSizeClass = windowSizeClass
     )
 }
+
 @Composable
 fun CompactContent(
     onScreenSelected: (Screen) -> Unit,

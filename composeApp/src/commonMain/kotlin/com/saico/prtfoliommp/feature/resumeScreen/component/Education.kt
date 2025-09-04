@@ -44,7 +44,7 @@ fun Education(resume: Resume, windowSizeClass: WindowSizeClass) {
     val uriHandler = LocalUriHandler.current
     var show by remember { mutableStateOf(false) }
 
-    if (show){
+    if (show) {
         AlertDialog(
             onDismissRequest = { show = false },
             content = {
@@ -52,7 +52,6 @@ fun Education(resume: Resume, windowSizeClass: WindowSizeClass) {
                     modifier = Modifier.padding(8.dp),
                     painter = painterResource(Res.drawable.titulo),
                     contentDescription = null,
-//                    contentScale = ContentScale.Crop
                 )
             }
         )
@@ -92,10 +91,10 @@ fun Education(resume: Resume, windowSizeClass: WindowSizeClass) {
                 Text(
                     modifier = Modifier
                         .padding(8.dp)
-                        .clickable{
-                            if (education.haveCertification){
+                        .clickable {
+                            if (education.haveCertification) {
                                 education.certificationURL?.let { uriHandler.openUri(it) }
-                            }else{
+                            } else {
                                 show = true
                             }
                         },
@@ -104,12 +103,12 @@ fun Education(resume: Resume, windowSizeClass: WindowSizeClass) {
                     fontWeight = FontWeight.Bold,
                 )
 
-                if (windowSizeClass == WindowSizeClass.Expanded){
+                if (windowSizeClass == WindowSizeClass.Expanded) {
                     IconButton(
                         onClick = {
-                            if (education.haveCertification){
+                            if (education.haveCertification) {
                                 education.certificationURL?.let { uriHandler.openUri(it) }
-                            }else{
+                            } else {
                                 show = true
                             }
                         },
@@ -124,7 +123,7 @@ fun Education(resume: Resume, windowSizeClass: WindowSizeClass) {
 
                 }
 
-                }
+            }
             if (resume.educationList.indexOf(education) != resume.educationList.lastIndex) {
                 VerticalDivider(
                     modifier = Modifier
