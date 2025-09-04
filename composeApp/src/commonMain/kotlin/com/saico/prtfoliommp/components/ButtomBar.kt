@@ -163,7 +163,7 @@ fun CompactBottomBar(uriHandler: UriHandler, linkedinUrl: String, githubUri: Str
                 contentDescription = null
             )
             Text(
-                text = "john.mckinley@examplepetstore.com",
+                text = "jorgito.avc03@gmail.com",
                 color = Color.White,
             )
         }
