@@ -45,7 +45,7 @@ fun ContentCompactAboutScreen() {
         ConstraintLayout(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(top = 56.dp, start = 8.dp, end = 8.dp)
+                .padding(horizontal =  56.dp, vertical = 8.dp)
 //                .background(color = Color.Black),
 //                .background(color = Color.Black)
         ) {
