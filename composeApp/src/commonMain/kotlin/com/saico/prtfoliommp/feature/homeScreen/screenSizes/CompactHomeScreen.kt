@@ -28,6 +28,7 @@ import com.saico.prtfoliommp.util.WindowSizeClass
 import org.jetbrains.compose.resources.painterResource
 import portfolio.composeapp.generated.resources.Res
 import portfolio.composeapp.generated.resources.desk6
+import portfolio.composeapp.generated.resources.walla1
 
 @Composable
 fun CompactHomeScreen(
@@ -62,7 +63,7 @@ fun CompactContent(
                         start.linkTo(parent.start)
                     },
                 contentScale = ContentScale.Crop,
-                painter = painterResource(Res.drawable.desk6),
+                painter = painterResource(Res.drawable.walla1),
                 contentDescription = null
             )
             Column(

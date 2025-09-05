@@ -28,6 +28,7 @@ import com.saico.prtfoliommp.util.WindowSizeClass
 import org.jetbrains.compose.resources.painterResource
 import portfolio.composeapp.generated.resources.Res
 import portfolio.composeapp.generated.resources.desk6
+import portfolio.composeapp.generated.resources.walla1
 
 @Composable
 fun ExpandedHomeScreen(
@@ -62,19 +63,21 @@ fun ExtendedContent(
                         start.linkTo(parent.start)
                     },
                 contentScale = ContentScale.Crop,
-                painter = painterResource(Res.drawable.desk6),
+                painter = painterResource(Res.drawable.walla1),
                 contentDescription = null
             )
 
             Column(
                 modifier = Modifier
-                    .padding(start = 92.dp)
                     .fillMaxWidth()
                     .constrainAs(information) {
                         top.linkTo(parent.top)
                         start.linkTo(parent.start)
+                        end.linkTo(parent.end)
                         bottom.linkTo(parent.bottom)
-                    }
+                    },
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.Center
             ) {
                 Text(
                     text = "Hi, I'm Jorge A.",

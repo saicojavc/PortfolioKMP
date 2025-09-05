@@ -45,55 +45,39 @@ fun BottomBar(windowSizeClass: WindowSizeClass) {
 @Composable
 fun ExpandBottomBar(uriHandler: UriHandler, linkedinUrl: String, githubUri: String) {
     Row(
-        modifier = Modifier.padding(16.dp),
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(16.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceBetween,
     ) {
-
-        Image(
-            modifier = Modifier
-                .padding(4.dp)
-                .background(color = Color.White, shape = CircleShape)
-                .size(35.dp)
-                .clickable { uriHandler.openUri(linkedinUrl) },
-            painter = painterResource(Res.drawable.`in`),
-            contentDescription = "LinkedIn Profile"
-        )
-        Image(
-
-            modifier = Modifier
-                .padding(4.dp)
-                .background(color = Color.White, shape = CircleShape)
-                .size(35.dp)
-                .clickable { uriHandler.openUri(githubUri) },
-            painter = painterResource(Res.drawable.github),
-            contentDescription = null
-        )
-        Image(
-            modifier = Modifier
-                .padding(4.dp)
-                .background(color = Color.White, shape = CircleShape)
-                .size(35.dp),
-            painter = painterResource(Res.drawable.phone),
-            contentDescription = null
-        )
         Text(
-            text = "+1 305 342 0620",
-            color = Color.White,
+            text = "© 2025 Jorge A. Valdes. All rights reserved.",
+            color = Color.Gray,
         )
-        Image(
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            Image(
+                modifier = Modifier
+                    .padding(4.dp)
+                    .background(color = Color.White, shape = CircleShape)
+                    .size(35.dp)
+                    .clickable { uriHandler.openUri(linkedinUrl) },
+                painter = painterResource(Res.drawable.`in`),
+                contentDescription = "LinkedIn Profile"
+            )
+            Image(
 
-            modifier = Modifier
-                .padding(4.dp)
-                .background(color = Color.White, shape = CircleShape)
-                .size(35.dp),
-            painter = painterResource(Res.drawable.email),
-            contentDescription = null
-        )
-        Text(
-            text = "jorgito.avc03@gmail.com",
-            color = Color.White,
-        )
+                modifier = Modifier
+                    .padding(4.dp)
+                    .background(color = Color.White, shape = CircleShape)
+                    .size(35.dp)
+                    .clickable { uriHandler.openUri(githubUri) },
+                painter = painterResource(Res.drawable.github),
+                contentDescription = null
+            )
+        }
 
     }
 }
@@ -109,10 +93,11 @@ fun CompactBottomBar(uriHandler: UriHandler, linkedinUrl: String, githubUri: Str
         verticalArrangement = Arrangement.SpaceBetween,
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-
-        Row(
-            verticalAlignment = Alignment.CenterVertically,
-        ) {
+        Text(
+            modifier = Modifier.padding(8.dp),
+            text = "© 2025 Jorge A. Valdes. All rights reserved.",
+            color = Color.Gray,
+        )
             Row(
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.SpaceBetween,
@@ -137,35 +122,5 @@ fun CompactBottomBar(uriHandler: UriHandler, linkedinUrl: String, githubUri: Str
                     contentDescription = null
                 )
             }
-            Image(
-                modifier = Modifier
-                    .padding(4.dp)
-                    .background(color = Color.White, shape = CircleShape)
-                    .size(35.dp),
-                painter = painterResource(Res.drawable.phone),
-                contentDescription = null
-            )
-            Text(
-                text = "+1 305 342 0620",
-                color = Color.White,
-            )
-        }
-        Row(
-            verticalAlignment = Alignment.CenterVertically,
-        ) {
-            Image(
-
-                modifier = Modifier
-                    .padding(4.dp)
-                    .background(color = Color.White, shape = CircleShape)
-                    .size(35.dp),
-                painter = painterResource(Res.drawable.email),
-                contentDescription = null
-            )
-            Text(
-                text = "jorgito.avc03@gmail.com",
-                color = Color.White,
-            )
-        }
     }
 }
