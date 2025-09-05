@@ -62,7 +62,7 @@ fun ExpandBottomBar(uriHandler: UriHandler, linkedinUrl: String, githubUri: Stri
                 modifier = Modifier
                     .padding(4.dp)
                     .background(color = Color.White, shape = CircleShape)
-                    .size(35.dp)
+                    .size(28.dp)
                     .clickable { uriHandler.openUri(linkedinUrl) },
                 painter = painterResource(Res.drawable.`in`),
                 contentDescription = "LinkedIn Profile"
@@ -72,7 +72,7 @@ fun ExpandBottomBar(uriHandler: UriHandler, linkedinUrl: String, githubUri: Stri
                 modifier = Modifier
                     .padding(4.dp)
                     .background(color = Color.White, shape = CircleShape)
-                    .size(35.dp)
+                    .size(28.dp)
                     .clickable { uriHandler.openUri(githubUri) },
                 painter = painterResource(Res.drawable.github),
                 contentDescription = null
@@ -106,7 +106,7 @@ fun CompactBottomBar(uriHandler: UriHandler, linkedinUrl: String, githubUri: Str
                     modifier = Modifier
                         .padding(4.dp)
                         .background(color = Color.White, shape = CircleShape)
-                        .size(35.dp)
+                        .size(28.dp)
                         .clickable { uriHandler.openUri(linkedinUrl) },
                     painter = painterResource(Res.drawable.`in`),
                     contentDescription = "LinkedIn Profile"
@@ -116,7 +116,7 @@ fun CompactBottomBar(uriHandler: UriHandler, linkedinUrl: String, githubUri: Str
                     modifier = Modifier
                         .padding(4.dp)
                         .background(color = Color.White, shape = CircleShape)
-                        .size(35.dp)
+                        .size(28.dp)
                         .clickable { uriHandler.openUri(githubUri) },
                     painter = painterResource(Res.drawable.github),
                     contentDescription = null

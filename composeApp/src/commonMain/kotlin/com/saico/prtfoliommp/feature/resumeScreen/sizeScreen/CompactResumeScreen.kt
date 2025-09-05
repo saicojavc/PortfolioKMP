@@ -21,6 +21,7 @@ import com.saico.prtfoliommp.util.WindowSizeClass
 import org.jetbrains.compose.resources.painterResource
 import portfolio.composeapp.generated.resources.Res
 import portfolio.composeapp.generated.resources.desk8
+import portfolio.composeapp.generated.resources.walla
 
 @Composable
 fun CompactResumeScreen(resume: Resume, windowSizeClass: WindowSizeClass) {
@@ -39,7 +40,6 @@ fun ContentCompactResumeScreen(resume: Resume, windowSizeClass: WindowSizeClass)
             modifier = Modifier
                 .fillMaxSize()
                 .background(color = Color.Black)
-                .alpha(0.3f)
                 .constrainAs(backgroundImage) {
                     top.linkTo(parent.top)
                     start.linkTo(parent.start)
@@ -47,7 +47,7 @@ fun ContentCompactResumeScreen(resume: Resume, windowSizeClass: WindowSizeClass)
                     bottom.linkTo(parent.bottom)
                 },
             contentScale = ContentScale.Crop,
-            painter = painterResource(Res.drawable.desk8),
+            painter = painterResource(Res.drawable.walla),
             contentDescription = null
         )
 
@@ -65,9 +65,6 @@ fun ContentCompactResumeScreen(resume: Resume, windowSizeClass: WindowSizeClass)
         ) {
             item {
                 Skills(resume = resume)
-            }
-            item {
-                Education(resume = resume, windowSizeClass = windowSizeClass)
             }
             item {
                 Experience(resume = resume)
