@@ -77,7 +77,7 @@ fun ExtendedContent(
                     }
             ) {
                 Text(
-                    text = "Jorge A.",
+                    text = "Hi, I'm Jorge A.",
                     color = Color.White,
                     fontFamily = FontFamily.Monospace,
                     fontWeight = FontWeight.SemiBold,
