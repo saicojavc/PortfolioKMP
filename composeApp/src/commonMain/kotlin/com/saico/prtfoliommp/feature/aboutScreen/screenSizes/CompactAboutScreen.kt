@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.ElevatedCard
@@ -49,7 +50,7 @@ fun ContentCompactAboutScreen() {
 //                .background(color = Color.Black)
         ) {
             val (info) = createRefs()
-            Column(
+            LazyColumn(
                 modifier = Modifier
                     .constrainAs(info) {
                         top.linkTo(parent.top)
@@ -60,14 +61,15 @@ fun ContentCompactAboutScreen() {
                 verticalArrangement = Arrangement.Center,
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                Image(
-                    modifier = Modifier
-                        .size(100.dp)
-                        .clip(shape = CircleShape),
-                    contentScale = ContentScale.Crop,
-                    painter = painterResource(Res.drawable.me),
-                    contentDescription = null,
-                )
+                item {
+                    Image(
+                        modifier = Modifier
+                            .size(100.dp)
+                            .clip(shape = CircleShape),
+                        contentScale = ContentScale.Crop,
+                        painter = painterResource(Res.drawable.me),
+                        contentDescription = null,
+                    )
 
 //                AsyncImage(
 //                    model = "https://res.cloudinary.com/ds4ko1uws/image/upload/v1756578749/me_dbrl4f.jpg",
@@ -75,70 +77,71 @@ fun ContentCompactAboutScreen() {
 //                    contentDescription = null,
 //                    contentScale = ContentScale.Crop
 //                )
-                Text(
-                    modifier = Modifier.padding(8.dp),
-                    text = "\n" +
-                            "Computer Engineer specialized in android development with experience" +
-                            "building native android applications using Kotlin and Jetpack Compose " +
-                            "and with strong focus on UI/UX best practice. Skilled in implementing MVVM architecture," +
-                            " Room Database and integration RESTfull API using Retrofit." +
-                            "\n" +
-                            "\n" +
-                            "I actively explore emerging technologies like Kotlin Multiplatform and Compose Multiplatform," +
-                            "driven by a passion for continuos learning and discovering new concepts. ",
-                    color = Color.White
-                )
-                ElevatedCard(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(8.dp)
-                        .border(1.dp, Color.White, shape = RoundedCornerShape(12.dp))
-                ) {
-                    Column(
+                    Text(
+                        modifier = Modifier.padding(8.dp),
+                        text = "\n" +
+                                "Computer Engineer specialized in android development with experience" +
+                                "building native android applications using Kotlin and Jetpack Compose " +
+                                "and with strong focus on UI/UX best practice. Skilled in implementing MVVM architecture," +
+                                " Room Database and integration RESTfull API using Retrofit." +
+                                "\n" +
+                                "\n" +
+                                "I actively explore emerging technologies like Kotlin Multiplatform and Compose Multiplatform," +
+                                "driven by a passion for continuos learning and discovering new concepts. ",
+                        color = Color.White
+                    )
+                    ElevatedCard(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .background(Color.Black),
-                        verticalArrangement = Arrangement.SpaceBetween,
-                        horizontalAlignment = Alignment.Start
+                            .padding(8.dp)
+                            .border(1.dp, Color.White, shape = RoundedCornerShape(12.dp))
                     ) {
                         Column(
-                            modifier = Modifier.padding(24.dp),
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .background(Color.Black),
                             verticalArrangement = Arrangement.SpaceBetween,
                             horizontalAlignment = Alignment.Start
                         ) {
-                            Text(
-                                text = "Education",
-                                color = Color.White,
-                                fontWeight = FontWeight.ExtraBold
-                            )
-                            Text(
-                                text = "Computer Engineering",
-                                color = Color.Gray
-                            )
-                            Text(
-                                text = "Central University of Las Villas",
-                                color = Color.Gray,
-                            )
+                            Column(
+                                modifier = Modifier.padding(24.dp),
+                                verticalArrangement = Arrangement.SpaceBetween,
+                                horizontalAlignment = Alignment.Start
+                            ) {
+                                Text(
+                                    text = "Education",
+                                    color = Color.White,
+                                    fontWeight = FontWeight.ExtraBold
+                                )
+                                Text(
+                                    text = "Computer Engineering",
+                                    color = Color.Gray
+                                )
+                                Text(
+                                    text = "Central University of Las Villas",
+                                    color = Color.Gray,
+                                )
 
-                        }
-                        Column(
-                            modifier = Modifier.padding(24.dp),
-                            verticalArrangement = Arrangement.SpaceBetween,
-                            horizontalAlignment = Alignment.Start
-                        ) {
-                            Text(
-                                text = "Location",
-                                color = Color.White,
-                                fontWeight = FontWeight.ExtraBold
-                            )
-                            Text(
-                                text = "Miami, Florida, USA",
-                                color = Color.Gray
-                            )
-                            Text(
-                                text = "Available for remote work worldwide",
-                                color = Color.Gray,
-                            )
+                            }
+                            Column(
+                                modifier = Modifier.padding(24.dp),
+                                verticalArrangement = Arrangement.SpaceBetween,
+                                horizontalAlignment = Alignment.Start
+                            ) {
+                                Text(
+                                    text = "Location",
+                                    color = Color.White,
+                                    fontWeight = FontWeight.ExtraBold
+                                )
+                                Text(
+                                    text = "Miami, Florida, USA",
+                                    color = Color.Gray
+                                )
+                                Text(
+                                    text = "Available for remote work worldwide",
+                                    color = Color.Gray,
+                                )
+                            }
                         }
                     }
                 }
