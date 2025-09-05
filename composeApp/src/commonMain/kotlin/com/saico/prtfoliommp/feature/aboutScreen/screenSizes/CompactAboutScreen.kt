@@ -45,13 +45,14 @@ fun ContentCompactAboutScreen() {
         ConstraintLayout(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(horizontal =  56.dp, vertical = 8.dp)
+                .padding(horizontal = 56.dp, vertical = 8.dp)
 //                .background(color = Color.Black),
 //                .background(color = Color.Black)
         ) {
             val (info) = createRefs()
             LazyColumn(
                 modifier = Modifier
+                    .padding(horizontal =  8.dp, vertical = 72.dp)
                     .constrainAs(info) {
                         top.linkTo(parent.top)
                         start.linkTo(parent.start)
