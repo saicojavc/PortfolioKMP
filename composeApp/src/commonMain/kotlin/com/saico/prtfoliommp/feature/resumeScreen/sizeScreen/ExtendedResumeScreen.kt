@@ -14,7 +14,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
-import com.saico.prtfoliommp.feature.resumeScreen.component.Education
 import com.saico.prtfoliommp.feature.resumeScreen.component.Experience
 import com.saico.prtfoliommp.feature.resumeScreen.component.Skills
 import com.saico.prtfoliommp.model.Resume
