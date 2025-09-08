@@ -28,7 +28,6 @@ import com.saico.prtfoliommp.util.WindowSizeClass
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 import portfolio.composeapp.generated.resources.Res
-import portfolio.composeapp.generated.resources.desk6
 import portfolio.composeapp.generated.resources.first_name_jorge
 import portfolio.composeapp.generated.resources.last_name_valdes
 import portfolio.composeapp.generated.resources.portfolio
@@ -40,12 +39,12 @@ import portfolio.composeapp.generated.resources.walla1
 fun ExpandedHomeScreen(
     onScreenSelected: (Screen) -> Unit,
     windowSizeClass: WindowSizeClass
-){
+) {
 
     ExtendedContent(
         onScreenSelected = onScreenSelected,
         windowSizeClass = windowSizeClass
-        )
+    )
 
 }
 
@@ -53,7 +52,7 @@ fun ExpandedHomeScreen(
 fun ExtendedContent(
     onScreenSelected: (Screen) -> Unit,
     windowSizeClass: WindowSizeClass
-){
+) {
     Column(
         modifier = Modifier.fillMaxSize(),
     ) {

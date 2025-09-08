@@ -23,11 +23,9 @@ import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 import portfolio.composeapp.generated.resources.Res
 import portfolio.composeapp.generated.resources.copy_right
-import portfolio.composeapp.generated.resources.email
 import portfolio.composeapp.generated.resources.github
 import portfolio.composeapp.generated.resources.`in`
 import portfolio.composeapp.generated.resources.linkedin_profile
-import portfolio.composeapp.generated.resources.phone
 
 @Composable
 fun BottomBar(windowSizeClass: WindowSizeClass) {
@@ -101,29 +99,29 @@ fun CompactBottomBar(uriHandler: UriHandler, linkedinUrl: String, githubUri: Str
             text = stringResource(Res.string.copy_right),
             color = Color.Gray,
         )
-            Row(
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.SpaceBetween,
-            ) {
-                Image(
-                    modifier = Modifier
-                        .padding(4.dp)
-                        .background(color = Color.White, shape = CircleShape)
-                        .size(28.dp)
-                        .clickable { uriHandler.openUri(linkedinUrl) },
-                    painter = painterResource(Res.drawable.`in`),
-                    contentDescription = stringResource(Res.string.linkedin_profile)
-                )
-                Image(
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.SpaceBetween,
+        ) {
+            Image(
+                modifier = Modifier
+                    .padding(4.dp)
+                    .background(color = Color.White, shape = CircleShape)
+                    .size(28.dp)
+                    .clickable { uriHandler.openUri(linkedinUrl) },
+                painter = painterResource(Res.drawable.`in`),
+                contentDescription = stringResource(Res.string.linkedin_profile)
+            )
+            Image(
 
-                    modifier = Modifier
-                        .padding(4.dp)
-                        .background(color = Color.White, shape = CircleShape)
-                        .size(28.dp)
-                        .clickable { uriHandler.openUri(githubUri) },
-                    painter = painterResource(Res.drawable.github),
-                    contentDescription = null
-                )
-            }
+                modifier = Modifier
+                    .padding(4.dp)
+                    .background(color = Color.White, shape = CircleShape)
+                    .size(28.dp)
+                    .clickable { uriHandler.openUri(githubUri) },
+                painter = painterResource(Res.drawable.github),
+                contentDescription = null
+            )
+        }
     }
 }
