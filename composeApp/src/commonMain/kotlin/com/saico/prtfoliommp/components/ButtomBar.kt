@@ -20,10 +20,13 @@ import androidx.compose.ui.platform.UriHandler
 import androidx.compose.ui.unit.dp
 import com.saico.prtfoliommp.util.WindowSizeClass
 import org.jetbrains.compose.resources.painterResource
+import org.jetbrains.compose.resources.stringResource
 import portfolio.composeapp.generated.resources.Res
+import portfolio.composeapp.generated.resources.copy_right
 import portfolio.composeapp.generated.resources.email
 import portfolio.composeapp.generated.resources.github
 import portfolio.composeapp.generated.resources.`in`
+import portfolio.composeapp.generated.resources.linkedin_profile
 import portfolio.composeapp.generated.resources.phone
 
 @Composable
@@ -52,7 +55,7 @@ fun ExpandBottomBar(uriHandler: UriHandler, linkedinUrl: String, githubUri: Stri
         horizontalArrangement = Arrangement.SpaceBetween,
     ) {
         Text(
-            text = "© 2025 Jorge A. Valdes. All rights reserved.",
+            text = stringResource(Res.string.copy_right),
             color = Color.Gray,
         )
         Row(
@@ -65,7 +68,7 @@ fun ExpandBottomBar(uriHandler: UriHandler, linkedinUrl: String, githubUri: Stri
                     .size(28.dp)
                     .clickable { uriHandler.openUri(linkedinUrl) },
                 painter = painterResource(Res.drawable.`in`),
-                contentDescription = "LinkedIn Profile"
+                contentDescription = stringResource(Res.string.linkedin_profile)
             )
             Image(
 
@@ -95,7 +98,7 @@ fun CompactBottomBar(uriHandler: UriHandler, linkedinUrl: String, githubUri: Str
     ) {
         Text(
             modifier = Modifier.padding(8.dp),
-            text = "© 2025 Jorge A. Valdes. All rights reserved.",
+            text = stringResource(Res.string.copy_right),
             color = Color.Gray,
         )
             Row(
@@ -109,7 +112,7 @@ fun CompactBottomBar(uriHandler: UriHandler, linkedinUrl: String, githubUri: Str
                         .size(28.dp)
                         .clickable { uriHandler.openUri(linkedinUrl) },
                     painter = painterResource(Res.drawable.`in`),
-                    contentDescription = "LinkedIn Profile"
+                    contentDescription = stringResource(Res.string.linkedin_profile)
                 )
                 Image(
 

@@ -4,17 +4,32 @@
     <string name="tooltip_private_github">Este proyecto es privado en GitHub</string>
     <string name="button_go_to_github">Ir a GitHub</string>
     <string name="menu">Menu</string> <!-- TRADUCIR -->
-    <string name="home">Home</string> <!-- TRADUCIR -->
-    <string name="about">About</string> <!-- TRADUCIR -->
+    <string name="home">Principal</string> <!-- TRADUCIR -->
+    <string name="about">Sobre mi</string> <!-- TRADUCIR -->
     <string name="resume">Resume</string> <!-- TRADUCIR -->
-    <string name="portfolio">Portfolio</string> <!-- TRADUCIR -->
-    <string name="linkedin_profile">LinkedIn Profile</string> <!-- TRADUCIR -->
+    <string name="portfolio">Portafolio</string> <!-- TRADUCIR -->
+    <string name="linkedin_profile">Perfil de LinkedIn</string> <!-- TRADUCIR -->
     <string name="phone_number">+1 305 342 0620</string> <!-- TRADUCIR -->
-    <string name="email_address">john.mckinley@examplepetstore.com</string> <!-- TRADUCIR -->
-    <string name="first_name_jorge">Jorge A.</string> <!-- TRADUCIR -->
+    <string name="email_address">jorgito.avc03@gmail.com</string> <!-- TRADUCIR -->
+    <string name="first_name_jorge">Hi, I'm Jorge A.</string> <!-- TRADUCIR -->
     <string name="last_name_valdes">Valdes</string> <!-- TRADUCIR -->
-    <string name="title_android_developer">Android Developer</string> <!-- TRADUCIR -->
-    <string name="about_me_description">Computer Engineer specialized in android development with experiencebuilding native android applications using Kotlin and Jetpack Compose and with strong focus on UI/UX best practice. Skilled in implementing MVVM architecture, Room Database and integration RESTfull API using Retrofit.</string> <!-- TRADUCIR -->
+    <string name="title_android_developer">Desarrollador Android</string> <!-- TRADUCIR -->
+    <string name="about_me_description">\ n " +
+                                "Ingeniero informático especializado en desarrollo de Android con experiencia" +
+                                "Construyendo aplicaciones nativas de Android usando Kotlin y Jetpack Compose" +
+                                "Y con un fuerte enfoque en las mejores prácticas de UI/UX. Habilidad en la implementación de la arquitectura MVVM", +
+                                "Base de datos e integración de la API RESTFULL utilizando Retrofit". + +
+                                "\ n" +
+                                "\ n" +
+                                "Exploro activamente tecnologías emergentes como Kotlin Multiplatform y componiendo multiplataforma" +
+                                "Impulsado por una pasión por el aprendizaje continuo y descubrir nuevos conceptos.</string> <!-- TRADUCIR -->
     <string name="resume_screen_title">Resume Screen</string> <!-- TRADUCIR -->
-    <string name="download_cv">Download CV</string> <!-- TRADUCIR -->
+    <string name="download_cv">Descargar CV</string> <!-- TRADUCIR -->
+    <string name="copy_right">© 2025 Jorge A. Valdes. Todos los derechos reservados.</string>">
+    <string name="education">Educación</string>
+    <string name="computer_engineering">Ingeniero Informático</string>
+    <string name="university">Universidad Central de Las Villas</string>
+    <string name="location">Localización</string>
+    <string name="florida">Miami, Florida, USA</string>
+    <string name="available">Disponible para trabajar remotamente</string>
 </resources>

@@ -17,6 +17,6 @@ fun AboutContent(windowSizeClass: WindowSizeClass) {
     when (windowSizeClass) {
         WindowSizeClass.Compact -> CompactAboutScreen()
         WindowSizeClass.Medium -> CompactAboutScreen()
-        WindowSizeClass.Expanded -> ExpandedAboutScreen(windowSizeClass = windowSizeClass)
+        WindowSizeClass.Expanded -> ExpandedAboutScreen()
     }
 }

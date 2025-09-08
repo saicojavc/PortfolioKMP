@@ -31,6 +31,11 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.saico.prtfoliommp.model.Project
 import org.jetbrains.compose.resources.painterResource
+import org.jetbrains.compose.resources.stringResource
+import portfolio.composeapp.generated.resources.Res
+import portfolio.composeapp.generated.resources.button_go_to_github
+import portfolio.composeapp.generated.resources.tooltip_open_github
+import portfolio.composeapp.generated.resources.tooltip_private_github
 
 @Composable
 fun ProjectCard(project: Project) {
@@ -88,9 +93,9 @@ fun ProjectCard(project: Project) {
 fun GithubButton(project: Project) {
     val uriHandler = LocalUriHandler.current
     val tooltipMessage = if (project.hasGithubRepo) {
-        "Open repository on GitHub"
+        stringResource(Res.string.tooltip_open_github)
     } else {
-        "This project is private on GitHub"
+        stringResource(Res.string.tooltip_private_github)
     }
 
     TooltipBox(
@@ -119,7 +124,7 @@ fun GithubButton(project: Project) {
                 )
         ) {
             Text(
-                text = "Go to GitHub",
+                text = stringResource(Res.string.button_go_to_github),
                 color = if (project.hasGithubRepo) Color.White else Color.Gray
             )
         }

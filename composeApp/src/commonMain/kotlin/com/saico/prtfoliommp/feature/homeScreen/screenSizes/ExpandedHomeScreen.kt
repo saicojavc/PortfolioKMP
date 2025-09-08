@@ -26,8 +26,14 @@ import androidx.constraintlayout.compose.ConstraintLayout
 import com.saico.prtfoliommp.util.Screen
 import com.saico.prtfoliommp.util.WindowSizeClass
 import org.jetbrains.compose.resources.painterResource
+import org.jetbrains.compose.resources.stringResource
 import portfolio.composeapp.generated.resources.Res
 import portfolio.composeapp.generated.resources.desk6
+import portfolio.composeapp.generated.resources.first_name_jorge
+import portfolio.composeapp.generated.resources.last_name_valdes
+import portfolio.composeapp.generated.resources.portfolio
+import portfolio.composeapp.generated.resources.resume
+import portfolio.composeapp.generated.resources.title_android_developer
 import portfolio.composeapp.generated.resources.walla1
 
 @Composable
@@ -80,7 +86,7 @@ fun ExtendedContent(
                 verticalArrangement = Arrangement.Center
             ) {
                 Text(
-                    text = "Hi, I'm Jorge A.",
+                    text = stringResource(Res.string.first_name_jorge),
                     color = Color.White,
                     fontFamily = FontFamily.Monospace,
                     fontWeight = FontWeight.SemiBold,
@@ -88,7 +94,7 @@ fun ExtendedContent(
                 )
                 Text(
                     modifier = Modifier.padding(top = 8.dp),
-                    text = "Valdes",
+                    text = stringResource(Res.string.last_name_valdes),
                     color = Color.White,
                     fontFamily = FontFamily.Serif,
                     fontWeight = FontWeight.Black,
@@ -96,7 +102,7 @@ fun ExtendedContent(
                 )
                 Text(
                     modifier = Modifier.padding(top = 8.dp),
-                    text = "Android Developer",
+                    text = stringResource(Res.string.title_android_developer),
                     color = Color.White,
                     fontSize = 35.sp,
                     fontStyle = FontStyle.Italic
@@ -118,7 +124,7 @@ fun ExtendedContent(
                                 modifier = Modifier
                                     .padding(vertical = 4.dp, horizontal = 18.dp),
                                 fontWeight = FontWeight.Bold,
-                                text = "Resume",
+                                text = stringResource(Res.string.resume),
                                 color = Color.White
                             )
                         }
@@ -136,7 +142,7 @@ fun ExtendedContent(
                                 modifier = Modifier
                                     .padding(vertical = 4.dp, horizontal = 18.dp),
                                 fontWeight = FontWeight.Bold,
-                                text = "Portfolio",
+                                text = stringResource(Res.string.portfolio),
                                 color = Color.White
                             )
                         }

@@ -10,11 +10,26 @@
     <string name="portfolio">Portfolio</string>
     <string name="linkedin_profile">LinkedIn Profile</string>
     <string name="phone_number">+1 305 342 0620</string>
-    <string name="email_address">john.mckinley@examplepetstore.com</string>
-    <string name="first_name_jorge">Jorge A.</string>
+    <string name="email_address">jorgito.avc03@gmail.com</string>
+    <string name="first_name_jorge">Hi, I'm Jorge A.</string>
     <string name="last_name_valdes">Valdes</string>
     <string name="title_android_developer">Android Developer</string>
-    <string name="about_me_description">Computer Engineer specialized in android development with experiencebuilding native android applications using Kotlin and Jetpack Compose and with strong focus on UI/UX best practice. Skilled in implementing MVVM architecture, Room Database and integration RESTfull API using Retrofit.</string>
+    <string name="about_me_description">\n" +
+                                "Computer Engineer specialized in android development with experience" +
+                                "building native android applications using Kotlin and Jetpack Compose " +
+                                "and with strong focus on UI/UX best practice. Skilled in implementing MVVM architecture," +
+                                " Room Database and integration RESTfull API using Retrofit." +
+                                "\n" +
+                                "\n" +
+                                "I actively explore emerging technologies like Kotlin Multiplatform and Compose Multiplatform," +
+                                "driven by a passion for continuos learning and discovering new concepts.</string>
     <string name="resume_screen_title">Resume Screen</string>
     <string name="download_cv">Download CV</string>
+    <string name="copy_right">© 2025 Jorge A. Valdes. All rights reserved.</string>">
+    <string name="education">Education</string>
+    <string name="computer_engineering">Computer Engineering</string>
+    <string name="university">Central University of Las Villas</string>
+    <string name="location">Location</string>
+    <string name="florida">Miami, Florida, USA</string>
+    <string name="available">Available for remote work worldwide</string>
 </resources>

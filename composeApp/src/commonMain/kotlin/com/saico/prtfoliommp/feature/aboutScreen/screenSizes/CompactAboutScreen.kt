@@ -24,8 +24,16 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
 import org.jetbrains.compose.resources.painterResource
+import org.jetbrains.compose.resources.stringResource
 import portfolio.composeapp.generated.resources.Res
+import portfolio.composeapp.generated.resources.about_me_description
+import portfolio.composeapp.generated.resources.available
+import portfolio.composeapp.generated.resources.computer_engineering
+import portfolio.composeapp.generated.resources.education
+import portfolio.composeapp.generated.resources.florida
+import portfolio.composeapp.generated.resources.location
 import portfolio.composeapp.generated.resources.me
+import portfolio.composeapp.generated.resources.university
 
 @Composable
 fun CompactAboutScreen() {
@@ -46,8 +54,6 @@ fun ContentCompactAboutScreen() {
             modifier = Modifier
                 .fillMaxSize()
                 .padding(horizontal = 8.dp, vertical = 8.dp)
-//                .background(color = Color.Black),
-//                .background(color = Color.Black)
         ) {
             val (info) = createRefs()
             LazyColumn(
@@ -57,7 +63,6 @@ fun ContentCompactAboutScreen() {
                         top.linkTo(parent.top)
                         start.linkTo(parent.start)
                         end.linkTo(parent.end)
-//                        bottom.linkTo(parent.bottom)
                     },
                 verticalArrangement = Arrangement.Center,
                 horizontalAlignment = Alignment.CenterHorizontally
@@ -80,15 +85,7 @@ fun ContentCompactAboutScreen() {
 //                )
                     Text(
                         modifier = Modifier.padding(8.dp),
-                        text = "\n" +
-                                "Computer Engineer specialized in android development with experience" +
-                                "building native android applications using Kotlin and Jetpack Compose " +
-                                "and with strong focus on UI/UX best practice. Skilled in implementing MVVM architecture," +
-                                " Room Database and integration RESTfull API using Retrofit." +
-                                "\n" +
-                                "\n" +
-                                "I actively explore emerging technologies like Kotlin Multiplatform and Compose Multiplatform," +
-                                "driven by a passion for continuos learning and discovering new concepts. ",
+                        text = stringResource(Res.string.about_me_description),
                         color = Color.White
                     )
                     ElevatedCard(
@@ -110,16 +107,16 @@ fun ContentCompactAboutScreen() {
                                 horizontalAlignment = Alignment.Start
                             ) {
                                 Text(
-                                    text = "Education",
+                                    text = stringResource(Res.string.education),
                                     color = Color.White,
                                     fontWeight = FontWeight.ExtraBold
                                 )
                                 Text(
-                                    text = "Computer Engineering",
+                                    text = stringResource(Res.string.computer_engineering),
                                     color = Color.Gray
                                 )
                                 Text(
-                                    text = "Central University of Las Villas",
+                                    text = stringResource(Res.string.university),
                                     color = Color.Gray,
                                 )
 
@@ -130,16 +127,16 @@ fun ContentCompactAboutScreen() {
                                 horizontalAlignment = Alignment.Start
                             ) {
                                 Text(
-                                    text = "Location",
+                                    text = stringResource(Res.string.location),
                                     color = Color.White,
                                     fontWeight = FontWeight.ExtraBold
                                 )
                                 Text(
-                                    text = "Miami, Florida, USA",
+                                    text = stringResource(Res.string.florida),
                                     color = Color.Gray
                                 )
                                 Text(
-                                    text = "Available for remote work worldwide",
+                                    text = stringResource(Res.string.available),
                                     color = Color.Gray,
                                 )
                             }

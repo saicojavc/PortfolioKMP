@@ -15,6 +15,12 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.saico.prtfoliommp.util.Screen
+import org.jetbrains.compose.resources.stringResource
+import portfolio.composeapp.generated.resources.Res
+import portfolio.composeapp.generated.resources.about
+import portfolio.composeapp.generated.resources.home
+import portfolio.composeapp.generated.resources.portfolio
+import portfolio.composeapp.generated.resources.resume
 
 @Composable
 fun TopBar(currentScreen: Screen, onScreenSelected: (Screen) -> Unit) {
@@ -33,7 +39,7 @@ fun TopBar(currentScreen: Screen, onScreenSelected: (Screen) -> Unit) {
                         .padding(8.dp),
                     fontWeight = FontWeight.Bold,
                     fontFamily = FontFamily.SansSerif,
-                    text = "Home",
+                    text = stringResource(Res.string.home),
                     color = if (currentScreen == Screen.Home) Color.Gray else Color.White,
                 )
             }
@@ -48,7 +54,7 @@ fun TopBar(currentScreen: Screen, onScreenSelected: (Screen) -> Unit) {
                     modifier = Modifier
                         .padding(8.dp),
                     fontWeight = FontWeight.Bold,
-                    text = "About",
+                    text = stringResource(Res.string.about),
                     color = if (currentScreen == Screen.About) Color.Gray else Color.White
                 )
             }
@@ -63,7 +69,7 @@ fun TopBar(currentScreen: Screen, onScreenSelected: (Screen) -> Unit) {
                     modifier = Modifier
                         .padding(8.dp),
                     fontWeight = FontWeight.Bold,
-                    text = "Resume",
+                    text = stringResource(Res.string.resume),
                     color = if (currentScreen == Screen.Resume) Color.Gray else Color.White
                 )
             }
@@ -78,7 +84,7 @@ fun TopBar(currentScreen: Screen, onScreenSelected: (Screen) -> Unit) {
                     modifier = Modifier
                         .padding(8.dp),
                     fontWeight = FontWeight.Bold,
-                    text = "Portfolio",
+                    text =stringResource(Res.string.portfolio),
                     color = if (currentScreen == Screen.Portfolio) Color.Gray else Color.White
                 )
             }
