@@ -41,6 +41,8 @@ kotlin {
 
     sourceSets {
 
+
+
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
@@ -48,18 +50,12 @@ kotlin {
         }
         commonMain.dependencies {
 
-            //windows size class
-//            implementation(libs.adaptive)
-
             //constraintlayout
             implementation("tech.annexflow.compose:constraintlayout-compose-multiplatform:0.6.0")
 
-//            implementation("br.com.devsrsouza.compose.icons:{ICON_PACK}:1.1.1")
-
             implementation(libs.coil.compose)
-//            implementation(libs.coil.network.ktor)
-//            implementation(libs.ktor.client.core)
-
+            implementation(libs.coil.network.ktor)
+            implementation(libs.ktor.client.core)
 
 
             implementation(compose.runtime)

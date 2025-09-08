@@ -24,6 +24,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import coil3.compose.AsyncImage
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 import portfolio.composeapp.generated.resources.Res
@@ -138,16 +139,13 @@ fun ContentExpandedAboutScreen() {
                     contentDescription = null,
 
                     )
-            }
-
-
 //                AsyncImage(
 //                    model =  "https://res.cloudinary.com/ds4ko1uws/image/upload/v1756578749/me_dbrl4f.jpg",
 //                    contentDescription = null,
-//                    modifier = Modifier.size(350.dp).clip(shape = CircleShape),
+//                    modifier = Modifier.size(300.dp).clip(shape = CircleShape),
 //                    contentScale = ContentScale.Crop
 //                )
-
+            }
         }
     }
 }
