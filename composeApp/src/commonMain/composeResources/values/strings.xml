@@ -21,8 +21,23 @@
     <string name="copy_right">© 2025 Jorge A. Valdes. All rights reserved.</string>">
     <string name="education">Education</string>
     <string name="computer_engineering">Computer Engineering</string>
-    <string name="university">Central University of Las Villas</string>
+
     <string name="location">Location</string>
     <string name="florida">Miami, Florida, USA</string>
     <string name="available">Available for remote work worldwide</string>
+    <string name="experience">Work Experience</string>
+
+    <string name="freelance">Freelance | Android Developer</string>
+    <string name="comp">Computer Engineer | Android Developer</string>
+    <string name="intern">Intern in training | Researcher</string>
+    <string name="upwork">Upwork</string>
+    <string name="xetid">XETID</string>
+    <string name="university">Central University of Las Villas</string>
+    <string name="remote">Remote</string>
+    <string name="hybrid">Hybrid</string>
+    <string name="in_person">In-person</string>
+    <string name="date1">Jan 2025 - Present</string>
+    <string name="date2">Oct 2023 - Dic 2024</string>
+    <string name="date3">In-2022 - 2023</string>
+
 </resources>

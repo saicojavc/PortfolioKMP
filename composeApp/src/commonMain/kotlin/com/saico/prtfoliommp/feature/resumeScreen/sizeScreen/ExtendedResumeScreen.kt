@@ -3,24 +3,21 @@ package com.saico.prtfoliommp.feature.resumeScreen.sizeScreen
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
 import com.saico.prtfoliommp.feature.resumeScreen.component.Experience
-import com.saico.prtfoliommp.feature.resumeScreen.component.Skills
 import com.saico.prtfoliommp.model.Resume
 import com.saico.prtfoliommp.util.WindowSizeClass
 import org.jetbrains.compose.resources.painterResource
 import portfolio.composeapp.generated.resources.Res
-import portfolio.composeapp.generated.resources.desk8
 import portfolio.composeapp.generated.resources.walla
 
 @Composable
@@ -52,15 +49,18 @@ fun ContentExpandedResumeScreen(resume: Resume, windowSizeClass: WindowSizeClass
             painter = painterResource(Res.drawable.walla),
             contentDescription = null
         )
-        Row(
+        LazyColumn (
             modifier = Modifier
                 .padding(vertical = 74.dp, horizontal = 38.dp)
                 .fillMaxWidth(),
-            horizontalArrangement = Arrangement.SpaceAround,
+            verticalArrangement =  Arrangement.SpaceAround,
         ) {
 
-            Skills(resume = resume)
-            Experience(resume = resume)
+//            Skills(resume = resume)
+            item {
+                Experience(resume = resume, windowSizeClass = windowSizeClass)
+            }
+
         }
 
     }

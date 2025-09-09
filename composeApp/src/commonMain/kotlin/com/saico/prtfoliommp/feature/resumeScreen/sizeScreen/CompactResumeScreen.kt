@@ -8,18 +8,15 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
 import com.saico.prtfoliommp.feature.resumeScreen.component.Experience
-import com.saico.prtfoliommp.feature.resumeScreen.component.Skills
 import com.saico.prtfoliommp.model.Resume
 import com.saico.prtfoliommp.util.WindowSizeClass
 import org.jetbrains.compose.resources.painterResource
 import portfolio.composeapp.generated.resources.Res
-import portfolio.composeapp.generated.resources.desk8
 import portfolio.composeapp.generated.resources.walla
 
 @Composable
@@ -63,10 +60,8 @@ fun ContentCompactResumeScreen(resume: Resume, windowSizeClass: WindowSizeClass)
                 .padding(16.dp)
         ) {
             item {
-                Skills(resume = resume)
-            }
-            item {
-                Experience(resume = resume)
+//    Skills(resume = resume)
+                Experience(resume = resume, windowSizeClass = windowSizeClass)
             }
         }
     }

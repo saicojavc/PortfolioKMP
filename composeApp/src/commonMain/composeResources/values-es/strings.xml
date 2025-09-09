@@ -21,8 +21,21 @@
     <string name="copy_right">© 2025 Jorge A. Valdes. Todos los derechos reservados.</string>">
     <string name="education">Educación</string>
     <string name="computer_engineering">Ingeniero Informático</string>
-    <string name="university">Universidad Central de Las Villas</string>
     <string name="location">Localización</string>
     <string name="florida">Miami, Florida, USA</string>
     <string name="available">Disponible para trabajar remotamente</string>
+    <string name="experience">Experiencia de trabajo</string>
+
+    <string name="freelance">Freelance | Desarrollador de Android</string>
+    <string name="comp">Ingeniero informático | Desarrollador de Android</string>
+    <string name="intern">Pasante en entrenamiento | Investigador</string>
+    <string name="upwork">Upwork</string>
+    <string name="xetid">XETID</string>
+    <string name="university">Universidad Central de Las Villas</string>
+    <string name="remote">Remoto</string>
+    <string name="hybrid">Híbrido</string>
+    <string name="in_person">Presencial</string>
+    <string name="date1">Enero 2025 - Presente</string>
+    <string name="date2">Oct 2023 - Dic 2024</string>
+    <string name="date3">2022 - 2023</string>
 </resources>
