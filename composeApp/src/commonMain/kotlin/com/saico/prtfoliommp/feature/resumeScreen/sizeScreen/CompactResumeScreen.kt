@@ -13,6 +13,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
 import com.saico.prtfoliommp.feature.resumeScreen.component.Experience
+import com.saico.prtfoliommp.feature.resumeScreen.component.Skills
 import com.saico.prtfoliommp.model.Resume
 import com.saico.prtfoliommp.util.WindowSizeClass
 import org.jetbrains.compose.resources.painterResource
@@ -60,8 +61,8 @@ fun ContentCompactResumeScreen(resume: Resume, windowSizeClass: WindowSizeClass)
                 .padding(16.dp)
         ) {
             item {
-//    Skills(resume = resume)
                 Experience(resume = resume, windowSizeClass = windowSizeClass)
+                Skills(resume = resume, windowSizeClass = windowSizeClass)
             }
         }
     }

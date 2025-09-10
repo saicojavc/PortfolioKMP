@@ -14,6 +14,7 @@ import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -32,6 +33,7 @@ import org.jetbrains.compose.resources.stringResource
 import portfolio.composeapp.generated.resources.Res
 import portfolio.composeapp.generated.resources.experience
 import portfolio.composeapp.generated.resources.others_skills
+import portfolio.composeapp.generated.resources.skills
 import portfolio.composeapp.generated.resources.soft_skills
 import portfolio.composeapp.generated.resources.top_skills
 
@@ -46,9 +48,10 @@ fun Skills(resume: Resume, windowSizeClass: WindowSizeClass) {
     ) {
         Text(
             modifier = Modifier.padding(vertical = 16.dp, horizontal = 8.dp),
-            text = stringResource(Res.string.experience),
+            text = stringResource(Res.string.skills),
             color = Color.White,
-            fontWeight = FontWeight.ExtraBold
+            fontWeight = FontWeight.ExtraBold,
+            fontSize = MaterialTheme.typography.titleLarge.fontSize
         )
     }
 
@@ -92,12 +95,17 @@ fun ExtendSkills(resume: Resume) {
 
 @Composable
 fun CompactSkills(resume: Resume) {
-    Text(
-        modifier = Modifier.padding(8.dp),
-        text = "Top Skills",
-        color = Color.White,
-        fontWeight = FontWeight.ExtraBold
-    )
+    Column(
+        modifier = Modifier
+            .fillMaxWidth(),
+        verticalArrangement = Arrangement.SpaceBetween,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        SkillsCard(listSkills = resume.topSkills, title = Res.string.top_skills)
+        SkillsCard(listSkills = resume.otherSkills, title = Res.string.others_skills)
+        SkillsCard(listSkills = resume.softSkills, title = Res.string.soft_skills)
+    }
+
 }
 
 @Composable
