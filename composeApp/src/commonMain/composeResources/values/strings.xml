@@ -40,4 +40,30 @@
     <string name="date2">Oct 2023 - Dic 2024</string>
     <string name="date3">2022 - 2023</string>
 
+    <string name="skills">Skills</string>
+    <string name="kotlin">Kotlin</string>
+    <string name="jetpack">Jetpack Compose</string>
+    <string name="ui_ux">UI/UX</string>
+    <string name="retrofit">Retrofit</string>
+    <string name="room">Room Database</string>
+    <string name="gradle">Gradle</string>
+    <string name="studio">Android Studio</string>
+    <string name="github">Github</string>
+
+    <string name="firebase">Firebase</string>
+    <string name="kotlin_multiplatform">Kotlin Multiplatform</string>
+    <string name="compose_multiplatform">Compose Multiplatform</string>
+    <string name="material_ui">Material3 UI</string>
+    <string name="responsive_design">Responsive Design</string>
+    <string name="scrumm">Agile/Scrum</string>
+
+    <string name="problems_solving">Problem Solving</string>
+    <string name="communication">Technical Communication</string>
+    <string name="agile">Agile Methodology</string>
+    <string name="collaboration">Team Collaboration</string>
+
+    <string name="top_skills">Top Skills</string>
+    <string name="others_skills">Others Skills</string>
+    <string name="soft_skills">Soft Skills</string>
+
 </resources>
